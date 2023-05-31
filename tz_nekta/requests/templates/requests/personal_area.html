@@ -1,0 +1,10 @@
+{% extends 'requests/base.html' %}
+
+{% block content %}
+<h1>{{title}}</h1>
+<a href="{% url 'newrequest' %}">Создать заявку</a>
+<p><a href="{% url 'requestlist' %}">Посмотреть список заявок</a></p>
+<p><a href="{% url 'newmailbyid' %}">Создать сообщение к существующей заявке по id</a></p>
+<p><a href="{% url 'requestinfo' %}">Посмотреть информацию по заявке по id</a></p>
+<p><a href="{% url 'requestmessages' %}">Посмотреть сообщения к существующей заявке по id</a></p>
+{% endblock %}

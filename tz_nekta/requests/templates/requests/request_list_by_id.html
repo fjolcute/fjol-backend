@@ -1,0 +1,18 @@
+{% extends 'requests/base.html' %}
+
+{% block content %}
+<h1>{{title}}</h1>
+
+    <h1>Информация по заявке</h1>
+    <p><h1>Имя пользователя, оставившего заявку: </h1></p>
+    {{user_name}}
+    <p><h1>id заявки:</h1></p>
+    {{object_list.id}}
+    <p><h1>Название заявки:</h1></p>
+    <p>{{object_list.request}}</p>
+    <p><h1>Сообщения в заявке</h1></p>
+    {% for m in message_by_request_list %}
+    <p>{{m.reqmail}}</p>
+
+    {% endfor %}
+{% endblock %}
